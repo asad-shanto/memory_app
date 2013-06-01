@@ -121,6 +121,14 @@
     <Content Include="Assets\01.jpg" />
     <Content Include="Assets\02.jpg" />
     <Content Include="Assets\card_backview.jpg" />
+    <Content Include="Assets\Digits\1.jpg" />
+    <Content Include="Assets\Digits\2.jpg" />
+    <Content Include="Assets\Digits\3.jpg" />
+    <Content Include="Assets\Digits\4.jpg" />
+    <Content Include="Assets\Digits\5.jpg" />
+    <Content Include="Assets\Digits\6.jpg" />
+    <Content Include="Assets\Digits\7.jpg" />
+    <Content Include="Assets\Digits\8.jpg" />
     <Content Include="Assets\Logo.png" />
     <Content Include="Assets\SmallLogo.png" />
     <Content Include="Assets\SplashScreen.png" />
