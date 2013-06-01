@@ -6,8 +6,55 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    
+    <Page.Resources>
+        <Style TargetType="Button" x:Name="ButtonStyle">
+            <Setter Property="Width" Value="130" />
+            <Setter Property="Height" Value="130" />
+            <Setter Property="BorderBrush" Value="Black" />
+        </Style>
+    </Page.Resources>
 
-    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+    
+    <Grid x:Name="LayoutRoot" Background="White" Width="1200" Height="900" >
+        <StackPanel Orientation="Vertical">
+            <StackPanel Name="Header" Height="50" Width="1200"  Background="Orange" Margin="0,50,0,0">
+                <TextBlock FontStretch="UltraExpanded" HorizontalAlignment="Center" Margin="400,0,0,0" Text="Memory" FontFamily="Segoe Script" Foreground="Black" FontSize="30"/>
+            </StackPanel>
+            <StackPanel Name="MainContainer" Margin="0,50,0,0">
+                <StackPanel Name="LeftSideStackBar" Orientation="Horizontal" Width="200"></StackPanel>
 
+                <StackPanel Name="GameBoard" Orientation="Vertical" Width="600">
+                    <StackPanel Name="FirstRow" Orientation="Horizontal">
+                        <Button x:Name="Button1" Style="{StaticResource ButtonStyle}" />
+                        <Button x:Name="Button2" Style="{StaticResource ButtonStyle}" />
+                        <Button x:Name="Button3" Style="{StaticResource ButtonStyle}" />
+                        <Button x:Name="Button4" Style="{StaticResource ButtonStyle}" />
+                    </StackPanel>
+                    <StackPanel Name="SecondRow" Orientation="Horizontal">
+                        <Button x:Name="Button5" Style="{StaticResource ButtonStyle}" />
+                        <Button x:Name="Button6" Style="{StaticResource ButtonStyle}" />
+                        <Button x:Name="Button7" Style="{StaticResource ButtonStyle}" />
+                        <Button x:Name="Button8" Style="{StaticResource ButtonStyle}" />
+                    </StackPanel>
+                    <StackPanel Name="ThirdRow" Orientation="Horizontal" >
+                        <Button x:Name="Button9"  Style="{StaticResource ButtonStyle}" />
+                        <Button x:Name="Button10" Style="{StaticResource ButtonStyle}" />
+                        <Button x:Name="Button11" Style="{StaticResource ButtonStyle}" />
+                        <Button x:Name="Button12" Style="{StaticResource ButtonStyle}" />
+                    </StackPanel>
+                    <StackPanel Name="FourthRow" Orientation="Horizontal">
+                        <Button x:Name="Button13" Style="{StaticResource ButtonStyle}" />
+                        <Button x:Name="Button14" Style="{StaticResource ButtonStyle}" />
+                        <Button x:Name="Button15" Style="{StaticResource ButtonStyle}" />
+                        <Button x:Name="Button16" Style="{StaticResource ButtonStyle}" />
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Name="RightSideStackBar" Orientation="Horizontal" Width="300"></StackPanel>
+            </StackPanel>
+
+        </StackPanel>
     </Grid>
+
 </Page>
