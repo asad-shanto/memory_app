@@ -13,6 +13,13 @@
             <Setter Property="Height" Value="130" />
             <Setter Property="BorderBrush" Value="Black" />
         </Style>
+
+        <Style TargetType="Button" x:Name="RestartButtonStyle">
+            <Setter Property="Background" Value="Orange"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontFamily" Value="Segoe Script"/>
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
     </Page.Resources>
 
     
@@ -21,10 +28,13 @@
             <StackPanel Name="Header" Height="50" Width="1200"  Background="Orange" Margin="0,50,0,0">
                 <TextBlock FontStretch="UltraExpanded" HorizontalAlignment="Center" Margin="400,0,0,0" Text="Memory" FontFamily="Segoe Script" Foreground="Black" FontSize="30"/>
             </StackPanel>
-            <StackPanel Name="MainContainer" Margin="0,50,0,0">
-                <StackPanel Name="LeftSideStackBar" Orientation="Horizontal" Width="200"></StackPanel>
+            <StackPanel Name="MainContainer" Margin="0,50,0,0" Orientation="Horizontal">
+                <StackPanel Name="LeftSideStackBar" Orientation="Horizontal" Width="200" Background="DarkGoldenrod">
+                    <Button x:Name="RestartGameButton" Content="Restart Game" Style="{StaticResource RestartButtonStyle}" Click="RestartGameButton_Click_1"/>
+                    <!--<TextBlock Text="Restart Now" FontStretch="UltraExpanded" HorizontalAlignment="Center" Margin="0,0,0,0" FontFamily="Segoe Script" Foreground="Black" FontSize="30"/>-->
+                </StackPanel>
 
-                <StackPanel Name="GameBoard" Orientation="Vertical" Width="600">
+                <StackPanel Name="GameBoard" Orientation="Vertical">
                     <StackPanel Name="FirstRow" Orientation="Horizontal">
                         <Button x:Name="Button1" Style="{StaticResource ButtonStyle}" Click="Button1_Click_1" />
                         <Button x:Name="Button2" Style="{StaticResource ButtonStyle}" Click="Button2_Click_1" />
@@ -51,7 +61,7 @@
                     </StackPanel>
                 </StackPanel>
 
-                <StackPanel Name="RightSideStackBar" Orientation="Horizontal" Width="300"></StackPanel>
+                <StackPanel Name="RightSideStackBar" Orientation="Horizontal" Width="300" Background="Aquamarine"></StackPanel>
             </StackPanel>
 
         </StackPanel>

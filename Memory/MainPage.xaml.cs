@@ -59,8 +59,6 @@ namespace Memory
             Button14.Background = brush1;
             Button15.Background = brush1;
             Button16.Background = brush1;
-
-            
         }
 
         /// <summary>
@@ -394,6 +392,11 @@ namespace Memory
             inputs[clicks] = buttonIndex;
             clicks++;
             UserInputsChecking(); 
+        }
+
+        private void RestartGameButton_Click_1(object sender, RoutedEventArgs e)
+        {
+            // Take player to home page
         }
     }
 }
