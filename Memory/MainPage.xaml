@@ -19,22 +19,37 @@
             <Setter Property="Foreground" Value="Black"/>
             <Setter Property="FontFamily" Value="Segoe Script"/>
             <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Width" Value="300"/>
         </Style>
     </Page.Resources>
 
     
     <Grid x:Name="LayoutRoot" Background="White" Width="1200" Height="900" >
-        <StackPanel Orientation="Vertical">
-            <StackPanel Name="Header" Height="50" Width="1200"  Background="Orange" Margin="0,50,0,0">
-                <TextBlock FontStretch="UltraExpanded" HorizontalAlignment="Center" Margin="400,0,0,0" Text="Memory" FontFamily="Segoe Script" Foreground="Black" FontSize="30"/>
+        <StackPanel Name="FullBody" Orientation="Vertical" Background="#FFC5BDF7">
+            <StackPanel Name="Header" Height="50" Width="1200"  Background="#FFC5BDF7" Margin="0,50,0,0">
+                <TextBlock FontStretch="UltraExpanded" HorizontalAlignment="Center" Margin="350,0,0,0" Text="Memory : Level 1" FontFamily="Segoe Script" Foreground="Black" FontSize="30" FontWeight="Bold"/>
             </StackPanel>
             <StackPanel Name="MainContainer" Margin="0,50,0,0" Orientation="Horizontal">
-                <StackPanel Name="LeftSideStackBar" Orientation="Horizontal" Width="200" Background="DarkGoldenrod">
-                    <Button x:Name="RestartGameButton" Content="Restart Game" Style="{StaticResource RestartButtonStyle}" Click="RestartGameButton_Click_1"/>
-                    <!--<TextBlock Text="Restart Now" FontStretch="UltraExpanded" HorizontalAlignment="Center" Margin="0,0,0,0" FontFamily="Segoe Script" Foreground="Black" FontSize="30"/>-->
+                <StackPanel Name="LeftSideStackBar" Orientation="Vertical" Width="400" Background="#FFC5BDF7">
+                    <StackPanel Name="GameOptions">
+                        <StackPanel>
+                            <TextBlock Text="Game Options" FontStretch="UltraExpanded" HorizontalAlignment="Left" Margin="20,0,0,25" FontWeight="Bold"  FontFamily="Segoe Script" Foreground="BlueViolet" FontSize="30"/>
+                        </StackPanel>
+                        <StackPanel Margin="20,0,0,0">
+                            <Button x:Name="StartButton" Content="Click To Start" Style="{StaticResource RestartButtonStyle}" Click="StartButton_Click_1"/>
+                        </StackPanel>
+                        <StackPanel Margin="20,0,0,0">
+                            <Button x:Name="RestartGameButton" Content="Restart Game" Style="{StaticResource RestartButtonStyle}" Click="RestartGameButton_Click_1"/>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Name="GameProgressDisplay">
+                        <TextBlock Text="Timer" FontStretch="UltraExpanded" HorizontalAlignment="Left" Margin="20,20,0,25" FontWeight="Bold"  FontFamily="Segoe Script" Foreground="BlueViolet" FontSize="30"/>
+                        <TextBlock x:Name="StopWatch" Text="00" Foreground="Black" FontSize="60" Margin="40,5,0,0"/>
+                        <TextBlock Name="output" Text="" FontSize="30" Margin="20,5,0,0" Foreground="Red"/>
+                    </StackPanel>
                 </StackPanel>
 
-                <StackPanel Name="GameBoard" Orientation="Vertical">
+                <StackPanel Name="GameBoard" Orientation="Vertical" Width="600">
                     <StackPanel Name="FirstRow" Orientation="Horizontal">
                         <Button x:Name="Button1" Style="{StaticResource ButtonStyle}" Click="Button1_Click_1" />
                         <Button x:Name="Button2" Style="{StaticResource ButtonStyle}" Click="Button2_Click_1" />
@@ -59,9 +74,20 @@
                         <Button x:Name="Button15" Style="{StaticResource ButtonStyle}" Click="Button15_Click_1" />
                         <Button x:Name="Button16" Style="{StaticResource ButtonStyle}" Click="Button16_Click_1" />
                     </StackPanel>
+                    <StackPanel Name="Result">
+                        <TextBlock x:Name="ResultTextBlock" FontFamily="Segoe Script" Foreground="DarkOrchid"/>
+                    </StackPanel>
                 </StackPanel>
 
-                <StackPanel Name="RightSideStackBar" Orientation="Horizontal" Width="300" Background="Aquamarine"></StackPanel>
+                <!--<StackPanel Name="RightSideStackBar" Orientation="Horizontal" Width="300" Background="#FFC5BDF7"></StackPanel>-->
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
+                <StackPanel>
+                    <Image Source="Assets/win8icon.png" Width="30" Height="30"/>
+                </StackPanel>
+                <StackPanel Margin="3,5,0,0">
+                    <TextBlock Text="Windows 8 Application" FontSize="20" FontWeight="ExtraBlack" />
+                </StackPanel>
             </StackPanel>
 
         </StackPanel>
