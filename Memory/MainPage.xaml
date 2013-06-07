@@ -30,7 +30,7 @@
                 <TextBlock FontStretch="UltraExpanded" HorizontalAlignment="Center" Margin="350,0,0,0" Text="Memory : Level 1" FontFamily="Segoe Script" Foreground="Black" FontSize="30" FontWeight="Bold"/>
             </StackPanel>
             <StackPanel Name="MainContainer" Margin="0,50,0,0" Orientation="Horizontal">
-                <StackPanel Name="LeftSideStackBar" Orientation="Vertical" Width="400" Background="#FFC5BDF7">
+                <StackPanel Name="LeftSideStackBar" Orientation="Vertical" Width="500" Background="#FFC5BDF7">
                     <StackPanel Name="GameOptions">
                         <StackPanel>
                             <TextBlock Text="Game Options" FontStretch="UltraExpanded" HorizontalAlignment="Left" Margin="20,0,0,25" FontWeight="Bold"  FontFamily="Segoe Script" Foreground="BlueViolet" FontSize="30"/>
@@ -45,37 +45,23 @@
                     <StackPanel Name="GameProgressDisplay">
                         <TextBlock Text="Timer" FontStretch="UltraExpanded" HorizontalAlignment="Left" Margin="20,20,0,25" FontWeight="Bold"  FontFamily="Segoe Script" Foreground="BlueViolet" FontSize="30"/>
                         <TextBlock x:Name="StopWatch" Text="00" Foreground="Black" FontSize="60" Margin="40,5,0,0"/>
-                        <TextBlock Name="output" Text="" FontSize="30" Margin="20,5,0,0" Foreground="Red"/>
+                        <TextBlock Name="ResultTag" Text="" FontSize="30" Margin="20,5,0,0" Foreground="Red"/>
+                        <TextBlock Name="output" Text="" FontSize="30" Margin="20,5,0,0" Foreground="OrangeRed"/>
                     </StackPanel>
                 </StackPanel>
 
                 <StackPanel Name="GameBoard" Orientation="Vertical" Width="600">
                     <StackPanel Name="FirstRow" Orientation="Horizontal">
-                        <Button x:Name="Button1" Style="{StaticResource ButtonStyle}" Click="Button1_Click_1" />
-                        <Button x:Name="Button2" Style="{StaticResource ButtonStyle}" Click="Button2_Click_1" />
-                        <Button x:Name="Button3" Style="{StaticResource ButtonStyle}" Click="Button3_Click_1" />
-                        <Button x:Name="Button4" Style="{StaticResource ButtonStyle}" Click="Button4_Click_1" />
                     </StackPanel>
                     <StackPanel Name="SecondRow" Orientation="Horizontal">
-                        <Button x:Name="Button5" Style="{StaticResource ButtonStyle}" Click="Button5_Click_1" />
-                        <Button x:Name="Button6" Style="{StaticResource ButtonStyle}" Click="Button6_Click_1" />
-                        <Button x:Name="Button7" Style="{StaticResource ButtonStyle}" Click="Button7_Click_1" />
-                        <Button x:Name="Button8" Style="{StaticResource ButtonStyle}" Click="Button8_Click_1" />
                     </StackPanel>
                     <StackPanel Name="ThirdRow" Orientation="Horizontal" >
-                        <Button x:Name="Button9"  Style="{StaticResource ButtonStyle}" Click="Button9_Click_1" />
-                        <Button x:Name="Button10" Style="{StaticResource ButtonStyle}" Click="Button10_Click_1" />
-                        <Button x:Name="Button11" Style="{StaticResource ButtonStyle}" Click="Button11_Click_1" />
-                        <Button x:Name="Button12" Style="{StaticResource ButtonStyle}" Click="Button12_Click_1" />
                     </StackPanel>
                     <StackPanel Name="FourthRow" Orientation="Horizontal">
-                        <Button x:Name="Button13" Style="{StaticResource ButtonStyle}" Click="Button13_Click_1" />
-                        <Button x:Name="Button14" Style="{StaticResource ButtonStyle}" Click="Button14_Click_1" />
-                        <Button x:Name="Button15" Style="{StaticResource ButtonStyle}" Click="Button15_Click_1" />
-                        <Button x:Name="Button16" Style="{StaticResource ButtonStyle}" Click="Button16_Click_1" />
                     </StackPanel>
                     <StackPanel Name="Result">
                         <TextBlock x:Name="ResultTextBlock" FontFamily="Segoe Script" Foreground="DarkOrchid"/>
+                        <!--<Image x:Name="CongratulationImage" Source="Assets/congratulations.png" Width="500" Height="200" Visibility="Collapsed" />-->
                     </StackPanel>
                 </StackPanel>
 

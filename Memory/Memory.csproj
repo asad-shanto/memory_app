@@ -118,9 +118,8 @@
     <None Include="Memory_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\01.jpg" />
-    <Content Include="Assets\02.jpg" />
     <Content Include="Assets\card_backview.jpg" />
+    <Content Include="Assets\congratulations.png" />
     <Content Include="Assets\Digits\1.jpg" />
     <Content Include="Assets\Digits\2.jpg" />
     <Content Include="Assets\Digits\3.jpg" />
